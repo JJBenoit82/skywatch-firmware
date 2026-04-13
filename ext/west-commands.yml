@@ -1,0 +1,6 @@
+west-commands:
+  - file: ext/hello/hello.py
+    commands:
+      - name: hello
+        class: Hello
+        help: prints a greeting
