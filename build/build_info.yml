@@ -1,0 +1,5 @@
+west:
+  command: C:\Users\JBENOIT\AppData\Local\Programs\Python\Python313\Scripts\west build
+    -p -b frdm_mcxn947/mcxn947/cpu0 . -d build
+  topdir: C:\ZephyrTraining\skywatch
+  version: 1.5.0
