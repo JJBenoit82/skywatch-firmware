@@ -5,7 +5,9 @@
  */
 
 #include <stdio.h>
+#include <zephyr/app_version.h>
 #include <zephyr/kernel.h>
+#include <zephyr/version.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/logging/log.h>
 #include "sensor_thread.h"
@@ -51,6 +53,9 @@ static void print_idle_thread_info(void)
 
 int main(void)
 {
+	LOG_INF("Firmware version: %s", APP_VERSION_STRING);
+	LOG_INF("Zephyr: %s", KERNEL_VERSION_STRING);
+	LOG_INF("Board: %s", CONFIG_BOARD);
 	//print_system_info();
 	LOG_DBG("Debug: Application starting");
 	LOG_INF("SkyWatch Weather Station - Lab 8");

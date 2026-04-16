@@ -8,6 +8,8 @@ target_sources(app PRIVATE
     src/app_thread.c
     src/data_mgr.c
     src/main.c
-    src/shell_commands.c
     src/sensor_thread.c    
 )
+
+target_sources_ifdef(CONFIG_SHELL app PRIVATE 
+    src/shell_commands.c)

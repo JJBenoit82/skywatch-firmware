@@ -1,0 +1,14 @@
+<testsuites>
+	<testsuite name="native_sim/native/64" timestamp="2026-04-16T15:16:23.304321" time="0.04" tests="7" failures="0" errors="0" skipped="0">
+		<properties>
+			<property name="version" value="v4.4.0" />
+		</properties>
+		<testcase classname="skywatch.unit.temperature" name="skywatch.unit.temperature.skywatch_temp.just_below_low" time="0.00" />
+		<testcase classname="skywatch.unit.temperature" name="skywatch.unit.temperature.skywatch_temp.just_above_high" time="0.00" />
+		<testcase classname="skywatch.unit.temperature" name="skywatch.unit.temperature.skywatch_temp.boundary_low" time="0.00" />
+		<testcase classname="skywatch.unit.temperature" name="skywatch.unit.temperature.skywatch_temp.boundary_high" time="0.00" />
+		<testcase classname="skywatch.unit.temperature" name="skywatch.unit.temperature.skywatch_temp.low_temperature" time="0.00" />
+		<testcase classname="skywatch.unit.temperature" name="skywatch.unit.temperature.skywatch_temp.high_temperature" time="0.00" />
+		<testcase classname="skywatch.unit.temperature" name="skywatch.unit.temperature.skywatch_temp.normal_temperature" time="0.00" />
+	</testsuite>
+</testsuites>
