@@ -1,5 +1,48 @@
+cmake:
+  application:
+    configuration-dir: 'C:/ZephyrTraining/skywatch/skywatch'
+    source-dir: 'C:/ZephyrTraining/skywatch/skywatch'
+  board:
+    name: 'frdm_mcxn947'
+    path:
+     - 'C:/ZephyrTraining/skywatch/zephyr/boards/nxp/frdm_mcxn947'
+    qualifiers: 'mcxn947/cpu0'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/bindings'
+    files:
+     - 'C:/ZephyrTraining/skywatch/zephyr/boards/nxp/frdm_mcxn947/frdm_mcxn947_mcxn947_cpu0.dts'
+    include-dirs:
+     - 'C:/ZephyrTraining/skywatch/modules/hal/nxp/dts'
+     - 'C:/ZephyrTraining/skywatch/zephyr/include'
+     - 'C:/ZephyrTraining/skywatch/zephyr/include/zephyr'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/common'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/vendor'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/rx'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/x86'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/xtensa'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/sparc'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/riscv'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/posix'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/arm64'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/arm'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts/arc'
+     - 'C:/ZephyrTraining/skywatch/zephyr/dts'
+  kconfig:
+    files:
+     - 'C:/ZephyrTraining/skywatch/zephyr/boards/nxp/frdm_mcxn947/frdm_mcxn947_mcxn947_cpu0_defconfig'
+     - 'C:/ZephyrTraining/skywatch/skywatch/prj.conf'
+    user-files:
+     - 'C:/ZephyrTraining/skywatch/skywatch/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: 'C:/Users/JBENOIT/zephyr-sdk-0.17.4'
+  zephyr:
+    version: '4.3.0'
+    zephyr-base: 'C:/ZephyrTraining/skywatch/zephyr'
+version: '0.1.0'
 west:
-  command: C:\Users\JBENOIT\AppData\Local\Programs\Python\Python313\Scripts\west build
-    -p -b frdm_mcxn947/mcxn947/cpu0 . -d build
-  topdir: C:\ZephyrTraining\skywatch
-  version: 1.5.0
+  command: 'C:\Users\JBENOIT\AppData\Local\Programs\Python\Python313\Scripts\west build -p -b frdm_mcxn947/mcxn947/cpu0 . -d build'
+  topdir: 'C:\ZephyrTraining\skywatch'
+  version: '1.5.0'

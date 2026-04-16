@@ -1,0 +1,10 @@
+tests:
+  skywatch.unit.temperature:
+    tags: unit sensor
+    platform_allow:
+      - native_sim
+      - frdm_mcxn947/mcxn947/cpu0
+    integration_platforms:
+      - native_sim
+    harness: ztest
+    timeout: 60
