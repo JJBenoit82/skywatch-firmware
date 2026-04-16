@@ -16,7 +16,7 @@
 LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 
 /* 1000 msec = 1 sec */
-#define SLEEP_TIME_MS   1000
+#define SLEEP_TIME_MS 1000
 
 /* The devicetree node identifier for the "led0" alias. */
 #define LED0_NODE DT_ALIAS(led0)
@@ -44,8 +44,8 @@ static void print_idle_thread_info(void)
 {
 	printk("\n");
 	printk("--- Idle Thread Information ---\n");
-	printk("The idle thread runs when no other threads are ready.\n");	
-	printk("It has the lowest priority in the system.\n");	
+	printk("The idle thread runs when no other threads are ready.\n");
+	printk("It has the lowest priority in the system.\n");
 	printk("During idle, the CPU can enter low-power modes.\n");
 	printk("-------------------------------\n");
 	printk("\n");
@@ -56,22 +56,22 @@ int main(void)
 	LOG_INF("Firmware version: %s", APP_VERSION_STRING);
 	LOG_INF("Zephyr: %s", KERNEL_VERSION_STRING);
 	LOG_INF("Board: %s", CONFIG_BOARD);
-	//print_system_info();
+	// print_system_info();
 	LOG_DBG("Debug: Application starting");
 	LOG_INF("SkyWatch Weather Station - Lab 8");
-	LOG_INF("Main thread: %s (priority %d)", k_thread_name_get(k_current_get()),k_thread_priority_get(k_current_get()));
+	LOG_INF("Main thread: %s (priority %d)", k_thread_name_get(k_current_get()),
+		k_thread_priority_get(k_current_get()));
 
 	int ret;
-	
-/* 	printk("\n========================================\n");
-	printk(" SkyWatch Weather Station - Lab 6\n");
-	printk("========================================\n");
-	printk("Main thread: %s (priority %d)\n", k_thread_name_get(k_current_get()), k_thread_priority_get(k_current_get()));
-	printk("========================================\n\n"); */
 
+	/* 	printk("\n========================================\n");
+		printk(" SkyWatch Weather Station - Lab 6\n");
+		printk("========================================\n");
+		printk("Main thread: %s (priority %d)\n", k_thread_name_get(k_current_get()),
+	   k_thread_priority_get(k_current_get()));
+		printk("========================================\n\n"); */
 
-	if (!gpio_is_ready_dt(&led))
-	{
+	if (!gpio_is_ready_dt(&led)) {
 		printk("Error: LED not ready\n");
 		return -1;
 	}
@@ -81,18 +81,17 @@ int main(void)
 		return 0;
 	}
 
-/* 	printk("[Main] Threads running:\n");
-	printk(" - Main: heartbeat LED (priority 0)\n");
-	printk(" - Sensor: temperature sampling (priority 5)\n");
-	printk(" - App: controller/alerts (priority 7)\n\n");
+	/* 	printk("[Main] Threads running:\n");
+		printk(" - Main: heartbeat LED (priority 0)\n");
+		printk(" - Sensor: temperature sampling (priority 5)\n");
+		printk(" - App: controller/alerts (priority 7)\n\n");
 
-	printk("LED will blink every %d ms\n", SLEEP_TIME_MS);
-	printk("Main thread entering blink loop...\n\n"); */
+		printk("LED will blink every %d ms\n", SLEEP_TIME_MS);
+		printk("Main thread entering blink loop...\n\n"); */
 
-	//print_idle_thread_info();
+	// print_idle_thread_info();
 
-	while (1) 
-	{
+	while (1) {
 		gpio_pin_toggle_dt(&led);
 		k_msleep(SLEEP_TIME_MS);
 	}
